@@ -16,11 +16,10 @@ body {
   background: rgb(0, 0, 0);
 }
 #section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   text-align: center;
-  margin: 0 20rem;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
 }
 #content h1,
 h4 {
@@ -30,19 +29,20 @@ h4 {
   font-size: 3rem;
 }
 #birthDate {
+  display: block;
   width: 15rem;
   text-align: center;
-  margin: 0 0 3rem 35rem;
+  margin: 0 0 3rem 0;
   outline: none;
   cursor: pointer;
   padding: 0.7rem;
   border: none;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   font-weight: bold;
+  margin: auto;
 }
 a {
-  position: relative;
-  display: inline-block;
+  display: block;
   padding: 6px 15px;
   color: #ffffff;
   text-transform: uppercase;
@@ -51,9 +51,11 @@ a {
   overflow: hidden;
   transition: 0.2s;
   width: 10rem;
-  margin: 0 0 3rem 37.5rem;
   font-weight: bold;
   letter-spacing: 2px;
+  text-align: center;
+  align-items: center;
+  margin: 4rem auto;
 }
 
 a:hover {
@@ -65,12 +67,13 @@ a:hover {
   visibility: hidden;
   height: 10rem;
   width: 10rem;
-  margin: 0 0 3rem 37.5rem;
+  margin: auto;
 }
 #gif.show {
   visibility: visible;
 }
 #output {
-  font-size: 5rem;
+  font-size: 3rem;
   color: white;
+  width: 100%;
 }
