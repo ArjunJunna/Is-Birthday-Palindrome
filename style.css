@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +28,19 @@ h4 {
   margin: 4rem 0rem;
 }
 #content h1 {
-  font-size: 3rem;
+  font-size: 6rem;
+  font-family: 'Caveat', cursive;
+  background-image: linear-gradient(45deg, #78f3d4, #c92050);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+#content h4 {
+  font-family: 'Secular One', sans-serif;
+  letter-spacing: 0.7rem;
 }
 #birthDate {
   display: block;
@@ -44,6 +58,7 @@ h4 {
 a {
   display: block;
   padding: 6px 15px;
+
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -55,25 +70,32 @@ a {
   letter-spacing: 2px;
   text-align: center;
   align-items: center;
-  margin: 4rem auto;
+  margin: 4rem auto 0rem;
 }
 
 a:hover {
-  color: #000000;
-  background: #ffffff;
+  background-image: linear-gradient(45deg, #78f3d4, #c92050);
   box-shadow: 0 0 2px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 #gif {
   visibility: hidden;
-  height: 10rem;
-  width: 10rem;
-  margin: auto;
+  height: 6rem;
+  width: 6rem;
+  margin: 2rem auto;
 }
 #gif.show {
   visibility: visible;
 }
 #output {
-  font-size: 3rem;
+  font-family: 'Secular One', sans-serif;
+  font-size: 2.5rem;
   color: white;
   width: 100%;
+  background-image: linear-gradient(45deg, #78f3d4, #c92050);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
