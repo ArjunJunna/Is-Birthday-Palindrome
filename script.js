@@ -4,15 +4,11 @@ const output = document.querySelector('#output');
 const giffy = document.querySelector('#gif');
 
 btn.addEventListener('click', function () {
-  let date = birthDate.value;
-  if (date === '') {
-    alert('Please select your birth date...');
-  } else {
-    giffy.className = 'show';
-    setTimeout(function () {
-      giffy.className = giffy.className.replace('show', '');
-    }, 10000);
-  }
+  giffy.className = 'show';
+  setTimeout(function () {
+    giffy.className = giffy.className.replace('show', '');
+  }, 10000);
+  callPalindrome(date.value);
 });
 //Convert Date to String
 function dateToString(date) {
@@ -47,7 +43,6 @@ const findNextPalindrome = (dateList) => {
   }
   return [trueFlag, palDate, dayCount];
 };
-
 //Check if palindrome
 const isPalindrome = function (dateList) {
   dateFormats = [
@@ -83,7 +78,6 @@ const isPalindrome = function (dateList) {
   }
   return ['', ''];
 };
-
 //Calls the function in different date format
 function callPalindrome(date) {
   let dateVal = date.split('-');
@@ -101,12 +95,3 @@ function callPalindrome(date) {
     }, 10000);
   }
 }
-
-//Button trigger to check
-btn.addEventListener('click', () => {
-  output.innerText = '';
-  if (!date.value) {
-    output.innerText = `Provide a valid date.`;
-  }
-  callPalindrome(date.value);
-});

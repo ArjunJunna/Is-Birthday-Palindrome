@@ -55,11 +55,10 @@ h4 {
   font-weight: bold;
   margin: auto;
 }
-a {
+button {
   display: block;
   padding: 6px 15px;
-
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 18px;
@@ -71,9 +70,11 @@ a {
   text-align: center;
   align-items: center;
   margin: 4rem auto 0rem;
+  outline: none;
+  border: none;
 }
 
-a:hover {
+button:hover {
   background-image: linear-gradient(45deg, #78f3d4, #c92050);
   box-shadow: 0 0 2px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
