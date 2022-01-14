@@ -3,15 +3,15 @@ const btn = document.querySelector('#btn');
 const output = document.querySelector('#output');
 const giffy = document.querySelector('#gif');
 
-btn.addEventListener('click', function () {
+btn.addEventListener('click', ()=>{
   giffy.className = 'show';
-  setTimeout(function () {
+  setTimeout(()=>{
     giffy.className = giffy.className.replace('show', '');
   }, 10000);
   callPalindrome(date.value);
 });
 //Convert Date to String
-function dateToString(date) {
+const dateToString=date=>{
   let dd = date.getDate();
   let mm = date.getMonth() + 1;
   if (dd < 10) {
@@ -29,7 +29,7 @@ let maxDate = dateToString(today);
 date.setAttribute('max', maxDate);
 date.setAttribute('value', maxDate);
 
-const findNextPalindrome = (dateList) => {
+const findNextPalindrome = dateList=> {
   let curDate = new Date(dateList.join('-'));
   curDate.setDate(curDate.getDate() + 1);
   console.log(dateToString(curDate));
@@ -44,7 +44,7 @@ const findNextPalindrome = (dateList) => {
   return [trueFlag, palDate, dayCount];
 };
 //Check if palindrome
-const isPalindrome = function (dateList) {
+const isPalindrome = dateList=>{
   dateFormats = [
     dateList[1] + dateList[2] + dateList[0],
     dateList[2] + dateList[1] + dateList[0],
@@ -79,7 +79,7 @@ const isPalindrome = function (dateList) {
   return ['', ''];
 };
 //Calls the function in different date format
-function callPalindrome(date) {
+const callPalindrome=date=>{
   let dateVal = date.split('-');
   //Check if palindrome in 4 formats
   let [flagFormat, palDate] = isPalindrome(dateVal);
